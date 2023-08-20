@@ -2,11 +2,10 @@
 pragma solidity ^0.8.3;
 
 contract votingsystem {
-  address public owner;
-  mapping(string => uint256) public votes
+	address public owner;
+	mapping(string => uint256) public votes
 	
-	constructo
-	r(){
+	constructor(){
 	owner = msg.sender;
  	}
 	modifier onlyOwner(){
@@ -17,7 +16,7 @@ contract votingsystem {
  	require(bytes(candidate).length > 0, "candidate name must not be empty)";
 	votes[candidate]++;
 	}
- function getVotesForCandidate(string memory candidate) external view returns (uint256){
- return votes[candidate];
- }
+ 	function getVotesForCandidate(string memory candidate) external view returns (uint256){
+ 	return votes[candidate];
+ 	}
 }
