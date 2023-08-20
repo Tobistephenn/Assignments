@@ -49,3 +49,4 @@ contract bankmechanism {
 	return balances[msg.sender];
 	}
 }
+
